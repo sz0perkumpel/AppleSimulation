@@ -14,7 +14,7 @@ public class Apple {
     }
 
     public String toString() {
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
         result.add("Colour: " + this.colour);
         result.add("Acidity: " + this.acidity);
         result.add("Sweetness: " + this.sweetness);
