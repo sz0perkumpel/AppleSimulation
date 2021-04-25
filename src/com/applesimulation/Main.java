@@ -26,6 +26,8 @@ public class Main {
 //        Weather moderatelyFrosty= new Weather();
 //        Weather moderatelyWarm= new Weather();
 
+        AppleTree firstAppleTree= new AppleTree(0, 100);
+
 //        System.out.println(redApple.colour + " " + redApple.acidity + " " + redApple.sweetness);
 //        System.out.println(greenApple.colour + " " + greenApple.acidity + " " + greenApple.sweetness);
         System.out.println("Types of apple \n");
@@ -49,5 +51,7 @@ public class Main {
 
         System.out.println("Types of weather \n");
         System.out.println(veryFrosty);
+
+        System.out.println(firstAppleTree);
     }
 }
