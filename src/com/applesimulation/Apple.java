@@ -25,11 +25,11 @@ public class Apple {
         ArrayList<String> result = new ArrayList<>();
         result.add("Variety: " + this.variety);
         result.add("Colour: " + this.colour);
-        result.add("Acidity: " + this.acidity);
-        result.add("Sweetness: " + this.sweetness);
+        result.add("Acidity: " + this.acidity + "%");
+        result.add("Sweetness: " + this.sweetness + "%");
         result.add("Size: " + this.size);
-        result.add("Hardness: " + this.hardness);
-        result.add("Vitality: " + this.vitality);
+        result.add("Hardness: " + this.hardness + "%");
+        result.add("Vitality: " + this.vitality + "HP");
 
         return String.join("\n", result) + "\n";
     }

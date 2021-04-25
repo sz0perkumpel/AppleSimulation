@@ -20,8 +20,15 @@ public class Main {
         Apple fifteenthApple= new Apple("Jonagold", "green-yellow", 20, 80, "big", 60, 100);
         Apple sixteenthApple= new Apple("Golden Delicious", "green-yellow", 14, 86, "medium", 70, 100);
         Apple seventeenthApple= new Apple("Wilton's Star", "creamy yellow", 13, 87, "medium", 93, 100);
+
+        Weather veryFrosty= new Weather(17.8, 100, "Yes", 66, 45, 40, 68.9, 55, 0, 100);
+//        Weather frosty= new Weather();
+//        Weather moderatelyFrosty= new Weather();
+//        Weather moderatelyWarm= new Weather();
+
 //        System.out.println(redApple.colour + " " + redApple.acidity + " " + redApple.sweetness);
 //        System.out.println(greenApple.colour + " " + greenApple.acidity + " " + greenApple.sweetness);
+        System.out.println("Types of apple \n");
         System.out.println(firstApple);
         System.out.println(secondApple);
         System.out.println(thirdApple);
@@ -39,5 +46,8 @@ public class Main {
         System.out.println(fifteenthApple);
         System.out.println(sixteenthApple);
         System.out.println(seventeenthApple);
+
+        System.out.println("Types of weather \n");
+        System.out.println(veryFrosty);
     }
 }
