@@ -15,10 +15,10 @@ public class Weather {
     public Integer probabilityPests;
 
     public Weather(Double airTemperature, Integer humidity, String sun, Integer percentageInsolation, Integer percentageCloudy, Integer probabilityWind, Double windSpeed, Integer probabilityRain, Integer probabilitySnow, Integer probabilityPests) {
-        this.airTemperature= airTemperature;
-        this.humidity= humidity;
+        this.airTemperature = airTemperature;
+        this.humidity = humidity;
         this.sun = sun;
-        this.percentageInsolation= percentageInsolation;
+        this.percentageInsolation = percentageInsolation;
         this.percentageCloudy = percentageCloudy;
         this.probabilityWind = probabilityWind;
         this.windSpeed = windSpeed;

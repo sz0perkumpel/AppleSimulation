@@ -11,7 +11,7 @@ public class Apple {
     public Integer hardness;
     public Integer vitality;
 
-    public Apple(String variety, String  colour, Integer acidity, Integer sweetness, String size, Integer hardness, Integer vitality) {
+    public Apple(String variety, String colour, Integer acidity, Integer sweetness, String size, Integer hardness, Integer vitality) {
         this.variety = variety;
         this.colour = colour;
         this.acidity = acidity;
@@ -31,6 +31,6 @@ public class Apple {
         result.add("Hardness: " + this.hardness + "%");
         result.add("Vitality: " + this.vitality + "HP");
 
-        return String.join("\n", result) + "\n";
+        return "\n" + String.join("\n", result) + "\n";
     }
 }
