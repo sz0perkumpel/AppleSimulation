@@ -13,12 +13,12 @@ public class Simulation {
         this.healthyApples = healthyApples;
         this.spoiledApples = spoiledApples;
         this.simulationLength = simulationLength;
-        this.weather = new Weather(17.8, 100, "Yes", 66, 45, 40, 68.9, 55, 0, 100);
+        this.weather = new Weather(17.8, 100, "Suchy");
         AppleTreeGenerator appleTreeGenerator = new AppleTreeGenerator();
         this.appleTree = appleTreeGenerator.generate();
     }
 
-    public String toString(){
+    public String toString() {
         ArrayList<String> result = new ArrayList<>();
         result.add("Healthy apples: " + this.healthyApples);
         result.add("Spoiled apples: " + this.spoiledApples);
