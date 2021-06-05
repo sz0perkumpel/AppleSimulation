@@ -1,17 +1,38 @@
 package com.applesimulation;
 
+import java.util.Scanner;
+
 public class Main {
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Simulation simulation = new Simulation(40, 50, 30);
+        Weather weather;
+
+        System.out.println("Podaj długość symulacji: ");
+        Integer simulationLength = scanner.nextInt();
+        System.out.println("Podaj typ klimatu: ");
+        System.out.println("[1] zimny");
+        System.out.println("[2] umiarkowany");
+        System.out.println("[3] suchy");
+        Integer climateType = scanner.nextInt();
+        System.out.println("Podaj prawdopodobieństwo złych warunków: ");
+        Double disasterProbability = scanner.nextDouble();
+        switch (climateType) {
+            case 1:
+                weather = new ColdClimate(5.0, 50, disasterProbability);
+                break;
+            case 2:
+                weather = new ModerateClimate(20.0, 60, disasterProbability);
+                break;
+            case 3:
+                weather = new DryClimate(35.0, 30, disasterProbability);
+                break;
+            default:
+                weather = new Weather(20.0, 40, "unknown");
+        }
+        Simulation simulation = new Simulation(simulationLength, weather);
         System.out.println(simulation);
-        /*DryClimate dryClimate = new DryClimate(25.0, 50, 0.3);
-        System.out.println(dryClimate.growthRatio());
-        ColdClimate coldClimate = new ColdClimate(17.0, 20, 0.5);
-        System.out.println(coldClimate.growthRatio());
-        ModerateClimate moderateClimate = new ModerateClimate(20.0, 40, 0.5);
-        System.out.println(moderateClimate.growthRatio());
-        Soil soil = new Soil("Czarnoziem", 3.0, false);
-        System.out.println(soil.growthRatio());*/
+        simulation.run();
+        System.out.println(simulation);
     }
 }

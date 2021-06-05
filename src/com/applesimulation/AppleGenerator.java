@@ -10,10 +10,10 @@ public class AppleGenerator {
     }
 
     public Apple generate() {
-        return new Apple(generateNumber(), generateNumber());
+        return new Apple(generateNumber().doubleValue());
     }
 
     private Integer generateNumber() {
-        return this.numberGenerator.nextInt(101);
+        return this.numberGenerator.nextInt(50) + 1;
     }
 }

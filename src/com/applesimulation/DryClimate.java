@@ -11,10 +11,18 @@ public class DryClimate extends Weather {
     public Double growthRatio() {
         ProbabilityChecker checker = new ProbabilityChecker(droughtProbability);
         if (checker.success()) {
-            return 0.0;
+            return -0.3;
         } else {
             return super.growthRatio();
         }
+    }
+
+    public DryClimate nextDay() {
+        super.nextDay();
+        this.humidity = this.humidity % 50;
+        this.airTemperature = randomValue(25, 40).doubleValue();
+
+        return this;
     }
 
 }

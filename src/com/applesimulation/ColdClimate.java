@@ -11,10 +11,17 @@ public class ColdClimate extends Weather {
     public Double growthRatio() {
         ProbabilityChecker checker = new ProbabilityChecker(snowProbability);
         if (checker.success()) {
-            return super.growthRatio() * 0.7;
+            return super.growthRatio() * -10;
         } else {
             return super.growthRatio();
         }
     }
 
+    public ColdClimate nextDay() {
+        super.nextDay();
+        this.humidity = randomValue(0, 30);
+        this.airTemperature = randomValue(4, 15).doubleValue();
+
+        return this;
+    }
 }

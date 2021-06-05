@@ -1,14 +1,13 @@
 package com.applesimulation;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Soil {
-    public String type;
     public Double pH;
     public Boolean fertilizerPresence;
 
-    public Soil(String type, Double pH, Boolean fertilizerPresence) {
-        this.type = type;
+    public Soil(Double pH, Boolean fertilizerPresence) {
         this.pH = pH;
         this.fertilizerPresence = fertilizerPresence;
     }
@@ -31,11 +30,16 @@ public class Soil {
 
     public String toString() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("Type of soil: " + this.type);
         result.add("PH of soil: " + this.pH);
         result.add("Does the soil have fertilizer: " + this.fertilizerPresence);
 
         return "\n" + String.join("\n", result) + "\n";
+    }
+
+    public Soil nextDay() {
+        this.pH = new Random().nextDouble() * 10;
+
+        return this;
     }
 }
 
