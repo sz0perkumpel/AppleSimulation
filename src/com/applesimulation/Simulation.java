@@ -15,7 +15,7 @@ public class Simulation {
         this.weather = weather;
         AppleTreeGenerator appleTreeGenerator = new AppleTreeGenerator();
         this.appleTree = appleTreeGenerator.generate();
-        this.soil = new Soil(5.0, false);
+        this.soil = new Soil(5.0, true);
         this.currentDay = 0;
     }
 
@@ -55,7 +55,7 @@ public class Simulation {
                 System.out.println("DEAD");
                 break;
             }
-            System.out.println("Current ratio of growing: " + currentGrowthRatio + "\n");
+            System.out.println("Current growth ratio: " + currentGrowthRatio + "\n");
             System.out.println(this);
         }
     }

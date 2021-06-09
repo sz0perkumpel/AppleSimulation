@@ -18,7 +18,7 @@ public class AppleTree {
 
     public String toString() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("vitality: " + this.vitality + "HP");
+        result.add("vitality: " + this.vitality + " HP");
         //result.add("Apples: " + this.apples);
 
         return String.join("\n", result) + "\n";

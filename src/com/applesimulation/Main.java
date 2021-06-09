@@ -15,7 +15,7 @@ public class Main {
         System.out.println("[2] umiarkowany");
         System.out.println("[3] suchy");
         Integer climateType = scanner.nextInt();
-        System.out.println("Podaj prawdopodobieństwo złych warunków: ");
+        System.out.println("Podaj prawdopodobieństwo złych warunków (od 0,0 do 1,0): ");
         Double disasterProbability = scanner.nextDouble();
         switch (climateType) {
             case 1:

@@ -11,7 +11,7 @@ public class Apple {
 
     public String toString() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("Vitality: " + this.vitality + "HP");
+        result.add("Vitality: " + this.vitality + " HP");
 
         return "\n" + String.join("\n", result) + "\n";
     }

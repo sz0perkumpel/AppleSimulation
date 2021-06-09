@@ -14,7 +14,7 @@ public class Soil {
 
     public Double fertilizerGrowthRatio() {
         if (fertilizerPresence) {
-            return 0.2;
+            return 0.07;
         } else {
             return 0.0;
         }
