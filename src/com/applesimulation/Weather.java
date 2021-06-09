@@ -26,7 +26,7 @@ public class Weather {
         result.add("Humidity: " + this.humidity + "%");
         result.add("Climate: " + this.typeOfClimate);
 
-        return String.join("\n", result) + "\n";
+        return String.join("\n", result);
     }
 
     public Weather nextDay() {

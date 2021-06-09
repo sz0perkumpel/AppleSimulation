@@ -25,7 +25,7 @@ public class Simulation {
         result.add("Weather: " + this.weather);
         result.add(this.soil.toString());
         result.add("Number of apples: " + this.appleTree.apples.size());
-        result.add("Apple tree: " + this.appleTree);
+        result.add("Apple tree " + this.appleTree);
 
         return String.join("\n", result);
     }
@@ -52,10 +52,10 @@ public class Simulation {
 
             if (appleTree.vitality < 1) {
                 this.appleTree.apples = new ArrayList<>();
-                System.out.println("Drzewo umarło");
+                System.out.println("DEAD");
                 break;
             }
-            System.out.println("Current: " + currentGrowthRatio);
+            System.out.println("Current ratio of growing: " + currentGrowthRatio + "\n");
             System.out.println(this);
         }
     }

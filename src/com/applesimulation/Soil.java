@@ -33,7 +33,7 @@ public class Soil {
         result.add("PH of soil: " + this.pH);
         result.add("Does the soil have fertilizer: " + this.fertilizerPresence);
 
-        return "\n" + String.join("\n", result) + "\n";
+        return "\n" + String.join("\n", result);
     }
 
     public Soil nextDay() {
