@@ -3,6 +3,9 @@ package com.applesimulation;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Klasa odpowiedzialna za atrybuty i metody zwiazane z pogoda
+ */
 public class Weather {
     public Double airTemperature;
     public Integer humidity;
@@ -22,13 +25,16 @@ public class Weather {
 
     public String toString() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("Air temperature: " + this.airTemperature + " 'C");
-        result.add("Humidity: " + this.humidity + "%");
-        result.add("Climate: " + this.typeOfClimate);
+        result.add("Temperatura: " + this.airTemperature + " 'C");
+        result.add("Wilgotnosc: " + this.humidity + "%");
+        result.add("Klimat: " + this.typeOfClimate);
 
         return String.join("\n", result);
     }
 
+    /**
+     * Ogólna metoda losujaca i przeliczajaca wartosci
+     */
     public Weather nextDay() {
         this.airTemperature = numberGenerator.nextDouble() * 100;
         this.humidity = numberGenerator.nextInt(100);
@@ -36,6 +42,9 @@ public class Weather {
         return this;
     }
 
+    /**
+     * Ogólna metoda losujaca wartosc czynnikow
+     */
     public Integer randomValue(int minimum, int maximum) {
         int range = maximum - minimum + 1;
         return numberGenerator.nextInt(range) + minimum;

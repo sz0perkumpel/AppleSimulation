@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test jednostkowy dla metod z klasy Soil
+ */
 class SoilTest {
 
     @Test

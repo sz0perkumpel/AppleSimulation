@@ -2,13 +2,16 @@ package com.applesimulation;
 
 import java.util.Scanner;
 
+/**
+ * Klasa odpowiedzialna za wprowadzanie danych
+ */
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Weather weather;
 
-        System.out.println("Podaj długość symulacji: ");
+        System.out.println("Podaj długość symulacji (dni): ");
         Integer simulationLength = scanner.nextInt();
         System.out.println("Podaj typ klimatu: ");
         System.out.println("[1] zimny");

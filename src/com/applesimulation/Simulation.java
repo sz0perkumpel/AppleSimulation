@@ -7,9 +7,6 @@ import java.util.stream.Collectors;
  * Klasa odpowiedzialna za uruchomienie symulacji
  */
 public class Simulation {
-    /**
-     * Długość symulacji, jeżeli osiągnie 0, symulacja kończy sie
-     */
     public Integer simulationLength;
     public Weather weather;
     public AppleTree appleTree;
@@ -27,17 +24,17 @@ public class Simulation {
 
     public String toString() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("Simulation day: " + this.currentDay + " (" + this.simulationLength + ")");
-        result.add("Weather: " + this.weather);
+        result.add("Dzień symulacji: " + this.currentDay + " (" + this.simulationLength + ")");
+        result.add("Pogoda: " + this.weather);
         result.add(this.soil.toString());
-        result.add("Number of apples: " + this.appleTree.apples.size());
-        result.add("Apple tree " + this.appleTree);
+        result.add("Liczba jabłek: " + this.appleTree.apples.size());
+        result.add("Jabłoń: " + this.appleTree);
 
         return String.join("\n", result);
     }
 
     /**
-     * Metoda przeprowadza losowanie pogody i sprawdza zdrowie jabłek i jabloni, filtruje liste jablek
+     * Metoda odpowiedzialna za przeprowadzanie cykli symulacji wraz z usuwaniem zlych jablek
      */
     public void run() {
         for (int i = 0; i < simulationLength; i++) {
@@ -61,10 +58,10 @@ public class Simulation {
 
             if (appleTree.vitality < 1) {
                 this.appleTree.apples = new ArrayList<>();
-                System.out.println("DEAD");
+                System.out.println("DRZEWO UMARŁO");
                 break;
             }
-            System.out.println("Current growth ratio: " + currentGrowthRatio + "\n");
+            System.out.println("Aktualny współczynnik wzrostu: " + currentGrowthRatio + "\n");
             System.out.println(this);
         }
     }

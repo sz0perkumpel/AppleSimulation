@@ -2,6 +2,9 @@ package com.applesimulation;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test jednostkowy dla metod z Weather (rozne rodzaje wspolczynnika)
+ */
 class WeatherTest {
     private final Weather weather = new Weather(25.0, 20, "testowy");
 

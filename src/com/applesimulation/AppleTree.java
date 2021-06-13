@@ -2,6 +2,9 @@ package com.applesimulation;
 
 import java.util.ArrayList;
 
+/**
+ * Klasa odpowiedzialna za atrybuty i metody zwiazane z jablonia
+ */
 public class AppleTree {
     public Double vitality;
     public ArrayList<Apple> apples;
@@ -18,8 +21,8 @@ public class AppleTree {
 
     public String toString() {
         ArrayList<String> result = new ArrayList<>();
-        result.add("vitality: " + this.vitality + " HP");
-        //result.add("Apples: " + this.apples);
+        result.add("Ilość życia: " + this.vitality + " HP");
+        //result.add("Jabłka: " + this.apples);
 
         return String.join("\n", result) + "\n";
     }

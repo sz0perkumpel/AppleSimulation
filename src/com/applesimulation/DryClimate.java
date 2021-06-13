@@ -1,5 +1,8 @@
 package com.applesimulation;
 
+/**
+ * Klasa dziedziczaca po pogodzie dla klimatu suchego
+ */
 public class DryClimate extends Weather {
     public Double droughtProbability;
 
@@ -8,6 +11,9 @@ public class DryClimate extends Weather {
         this.droughtProbability = droughtProbability;
     }
 
+    /**
+     *  Metoda liczaca wspolczynnik pogodowy dla klimatu suchego
+     */
     public Double growthRatio() {
         ProbabilityChecker checker = new ProbabilityChecker(droughtProbability);
         if (checker.success()) {
@@ -17,6 +23,9 @@ public class DryClimate extends Weather {
         }
     }
 
+    /**
+     * Metoda losujaca wartosci z zakresu danego klimatu dla kazdego kolejnego dnia
+     */
     public DryClimate nextDay() {
         super.nextDay();
         this.humidity = this.humidity % 50;
