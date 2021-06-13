@@ -58,7 +58,7 @@ public class Simulation {
 
             if (appleTree.vitality < 1) {
                 this.appleTree.apples = new ArrayList<>();
-                System.out.println("DRZEWO UMARŁO");
+                System.out.println("DRZEWO UMARLO");
                 break;
             }
             System.out.println("Aktualny współczynnik wzrostu: " + currentGrowthRatio + "\n");
