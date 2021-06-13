@@ -3,7 +3,13 @@ package com.applesimulation;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
+/**
+ * Klasa odpowiedzialna za uruchomienie symulacji
+ */
 public class Simulation {
+    /**
+     * Długość symulacji, jeżeli osiągnie 0, symulacja kończy sie
+     */
     public Integer simulationLength;
     public Weather weather;
     public AppleTree appleTree;
@@ -30,6 +36,9 @@ public class Simulation {
         return String.join("\n", result);
     }
 
+    /**
+     * Metoda przeprowadza losowanie pogody i sprawdza zdrowie jabłek i jabloni, filtruje liste jablek
+     */
     public void run() {
         for (int i = 0; i < simulationLength; i++) {
             Double currentGrowthRatio;
